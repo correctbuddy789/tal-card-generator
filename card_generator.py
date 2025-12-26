@@ -6,6 +6,7 @@ Pure Python implementation for Streamlit Cloud deployment
 import os
 import re
 import base64
+import subprocess
 import requests
 from typing import Optional
 from pathlib import Path
@@ -13,6 +14,19 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 from playwright.sync_api import sync_playwright
+
+# Install Playwright browsers on first import (for Streamlit Cloud)
+def _install_playwright_browsers():
+    try:
+        subprocess.run(
+            ["playwright", "install", "chromium"],
+            check=True,
+            capture_output=True,
+        )
+    except Exception:
+        pass  # Ignore if already installed or fails
+
+_install_playwright_browsers()
 
 # Load environment variables
 load_dotenv()
