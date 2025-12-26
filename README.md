@@ -111,13 +111,6 @@ card-{company}-{timestamp}.png
 
 ### Model Settings (`CONFIG.gemini`)
 
-```javascript
-{
-  apiKey: process.env.GOOGLE_API_KEY,
-  model: "gemini-3-pro-preview",  // Using Pro for better quality
-}
-```
-
 The model is configured with:
 - `temperature: 0.9` - High creativity
 - `topP: 0.95` - Diverse outputs
