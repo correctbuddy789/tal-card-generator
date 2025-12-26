@@ -1,0 +1,17 @@
+{
+  "name": "company-card-poc",
+  "version": "1.0.0",
+  "description": "POC for TAL company card generator - viral feature",
+  "type": "module",
+  "main": "poc-card-generator.js",
+  "scripts": {
+    "generate": "node poc-card-generator.js",
+    "test": "node poc-card-generator.js Google"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.7",
+    "openai": "^6.15.0",
+    "puppeteer": "^22.0.0"
+  }
+}

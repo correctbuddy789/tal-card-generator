@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# Output
+output/
+
+# System
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.claude/
